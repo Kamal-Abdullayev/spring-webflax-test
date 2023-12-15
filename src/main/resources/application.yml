@@ -1,0 +1,23 @@
+projectx-webflux:
+  database:
+    host: 127.0.0.1
+    port: 5455
+    username: testUser
+    password: testPassword
+    name: projectxDb
+    schema: public
+    pool:
+      size:
+        initial: 3
+        max: 10
+
+spring:
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://127.0.0.1:5455/projectxDb
+    user: testUser
+    password: testPassword
+    baseline-version: 0
+
+server:
+  port: 8080

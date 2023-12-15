@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  projectx-webflux-db:
+    image: postgres:13.1-alpine
+    container_name: projectx-webflux-db
+    environment:
+      - POSTGRES_USER=testUser
+      - POSTGRES_PASSWORD=testPassword
+      - POSTGRES_DB=projectxDb
+    ports:
+      - 5455:5432
